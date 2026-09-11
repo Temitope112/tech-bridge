@@ -24,11 +24,6 @@
 }
 
 
-
-/* ======================================
-   RESET
-====================================== */
-
 *,
 *::before,
 *::after {
@@ -68,17 +63,19 @@ summary {
   font: inherit;
 }
 
+button {
+  border: 0;
+}
+
 ::selection {
   background: var(--green);
   color: var(--ink);
 }
 
-
 .container {
   width: min(calc(100% - 48px), var(--container));
   margin-inline: auto;
 }
-
 
 .eyebrow,
 .section-number {
@@ -93,11 +90,6 @@ summary {
 }
 
 
-
-/* ======================================
-   HEADER
-====================================== */
-
 .header {
   position: fixed;
   inset: 0 0 auto;
@@ -106,16 +98,13 @@ summary {
 
   height: var(--header-height);
 
-  border-bottom:
-    1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-  background:
-    rgba(8, 8, 13, 0.92);
+  background: rgba(8, 8, 13, 0.92);
 
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
-
 
 .header__inner {
   display: flex;
@@ -123,7 +112,6 @@ summary {
 
   height: 100%;
 }
-
 
 .brand {
   display: block;
@@ -133,11 +121,9 @@ summary {
   flex-shrink: 0;
 }
 
-
 .brand img {
   width: 100%;
 }
-
 
 .desktop-nav {
   display: flex;
@@ -149,28 +135,23 @@ summary {
   margin-right: 38px;
 }
 
-
 .desktop-nav a {
   position: relative;
 
   padding-block: 8px;
 
-  color:
-    rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.65);
 
   font-size: 0.76rem;
   font-weight: 600;
 
-  transition:
-    color var(--transition);
+  transition: color var(--transition);
 }
-
 
 .desktop-nav a:hover,
 .desktop-nav a.nav-active {
   color: var(--white);
 }
-
 
 .desktop-nav a::after {
   content: "";
@@ -188,17 +169,14 @@ summary {
   transform: scaleX(0);
   transform-origin: right;
 
-  transition:
-    transform var(--transition);
+  transition: transform var(--transition);
 }
-
 
 .desktop-nav a:hover::after,
 .desktop-nav a.nav-active::after {
   transform: scaleX(1);
   transform-origin: left;
 }
-
 
 .header__apply {
   display: inline-flex;
@@ -224,23 +202,16 @@ summary {
     transform var(--transition);
 }
 
-
 .header__apply:hover {
   background: var(--green-bright);
   transform: translateY(-2px);
 }
 
 
-
-/* ======================================
-   MOBILE MENU
-====================================== */
-
 .mobile-menu {
   display: none;
   margin-left: auto;
 }
-
 
 .mobile-menu summary {
   display: grid;
@@ -257,15 +228,12 @@ summary {
   list-style: none;
 
   border: 0;
-
   background: transparent;
 }
-
 
 .mobile-menu summary::-webkit-details-marker {
   display: none;
 }
-
 
 .mobile-menu summary span {
   display: block;
@@ -275,22 +243,16 @@ summary {
 
   background: var(--white);
 
-  transition:
-    transform var(--transition);
+  transition: transform var(--transition);
 }
-
 
 .mobile-menu[open] summary span:first-child {
-  transform:
-    translateY(3.5px) rotate(45deg);
+  transform: translateY(3.5px) rotate(45deg);
 }
-
 
 .mobile-menu[open] summary span:last-child {
-  transform:
-    translateY(-3.5px) rotate(-45deg);
+  transform: translateY(-3.5px) rotate(-45deg);
 }
-
 
 .mobile-nav {
   position: fixed;
@@ -302,42 +264,33 @@ summary {
   display: flex;
   flex-direction: column;
 
-  max-height:
-    calc(100svh - var(--header-height));
+  max-height: calc(100svh - var(--header-height));
 
   padding: 24px;
 
   overflow-y: auto;
 
-  border-top:
-    1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 
-  background:
-    rgba(11, 13, 18, 0.98);
+  background: rgba(11, 13, 18, 0.98);
 
-  box-shadow:
-    0 30px 60px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
 }
-
 
 .mobile-nav > a:not(.mobile-nav__apply) {
   padding: 16px 0;
 
-  border-bottom:
-    1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-  color:
-    rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.72);
 
   font-size: 0.9rem;
   font-weight: 600;
 }
 
-
 .mobile-nav > a.mobile-nav__active {
   color: var(--green);
 }
-
 
 .mobile-nav__apply {
   margin-top: 20px;
@@ -351,11 +304,6 @@ summary {
   font-weight: 800;
 }
 
-
-
-/* ======================================
-   TASKS HERO
-====================================== */
 
 .tasks-hero {
   position: relative;
@@ -376,7 +324,6 @@ summary {
 
   color: var(--white);
 }
-
 
 .tasks-hero__grid {
   position: absolute;
@@ -400,19 +347,15 @@ summary {
   background-size: 80px 80px;
 }
 
-
 .tasks-hero__giant {
   position: absolute;
 
   right: -3vw;
   bottom: -6vw;
 
-  color:
-    rgba(255, 255, 255, 0.025);
+  color: rgba(255, 255, 255, 0.025);
 
-  font-size:
-    clamp(24rem, 49vw, 52rem);
-
+  font-size: clamp(24rem, 49vw, 52rem);
   font-weight: 800;
 
   line-height: 0.72;
@@ -421,7 +364,6 @@ summary {
   user-select: none;
 }
 
-
 .tasks-hero__inner {
   position: relative;
   z-index: 2;
@@ -429,12 +371,10 @@ summary {
   display: flex;
   flex-direction: column;
 
-  min-height:
-    calc(100svh - var(--header-height));
+  min-height: calc(100svh - var(--header-height));
 
   padding-top: 48px;
 }
-
 
 .tasks-hero__top {
   display: flex;
@@ -445,15 +385,12 @@ summary {
 
   padding-bottom: 25px;
 
-  border-bottom:
-    1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
-
 
 .tasks-hero__top .eyebrow {
   color: var(--green);
 }
-
 
 .tasks-hero__status {
   display: flex;
@@ -461,7 +398,6 @@ summary {
 
   gap: 11px;
 }
-
 
 .tasks-hero__status span {
   width: 7px;
@@ -471,25 +407,19 @@ summary {
 
   background: var(--green);
 
-  box-shadow:
-    0 0 0 7px rgba(57, 184, 10, 0.12);
+  box-shadow: 0 0 0 7px rgba(57, 184, 10, 0.12);
 }
-
 
 .tasks-hero__status p {
   margin: 0;
 
-  color:
-    rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.4);
 
-  font-family:
-    "Space Mono", monospace;
-
+  font-family: "Space Mono", monospace;
   font-size: 0.55rem;
 
   letter-spacing: 0.11em;
 }
-
 
 .tasks-hero__content {
   display: grid;
@@ -507,59 +437,46 @@ summary {
   padding-block: 70px;
 }
 
-
 .tasks-hero__index {
   margin: 0 0 24px;
 
-  color:
-    rgba(255, 255, 255, 0.36);
+  color: rgba(255, 255, 255, 0.36);
 
-  font-family:
-    "Space Mono", monospace;
-
+  font-family: "Space Mono", monospace;
   font-size: 0.58rem;
 
   letter-spacing: 0.13em;
 }
-
 
 .tasks-hero h1 {
   max-width: 900px;
 
   margin: 0;
 
-  font-size:
-    clamp(4.5rem, 8vw, 9rem);
-
+  font-size: clamp(4.5rem, 8vw, 9rem);
   font-weight: 600;
 
   line-height: 0.8;
   letter-spacing: -0.085em;
 }
 
-
 .tasks-hero h1 span {
   display: block;
-
   color: var(--green);
 }
-
 
 .tasks-hero__aside {
   padding-bottom: 10px;
 }
 
-
 .tasks-hero__aside > p {
   margin: 0;
 
-  color:
-    rgba(255, 255, 255, 0.48);
+  color: rgba(255, 255, 255, 0.48);
 
   font-size: 0.9rem;
   line-height: 1.85;
 }
-
 
 .tasks-hero__aside > a {
   display: inline-flex;
@@ -571,27 +488,21 @@ summary {
 
   padding-bottom: 8px;
 
-  border-bottom:
-    1px solid rgba(255, 255, 255, 0.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
 
   font-size: 0.76rem;
   font-weight: 700;
 }
 
-
 .tasks-hero__aside > a span {
   color: var(--green);
 
-  transition:
-    transform var(--transition);
+  transition: transform var(--transition);
 }
-
 
 .tasks-hero__aside > a:hover span {
   transform: translateY(5px);
 }
-
-
 
 .tasks-hero__stats {
   display: grid;
@@ -605,10 +516,8 @@ summary {
 
   padding-block: 28px;
 
-  border-top:
-    1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 
 .tasks-hero__stats div {
   display: flex;
@@ -617,51 +526,183 @@ summary {
   gap: 10px;
 }
 
-
 .tasks-hero__stats div > span {
   color: var(--green);
 
-  font-family:
-    "Space Mono", monospace;
-
+  font-family: "Space Mono", monospace;
   font-size: 1rem;
 }
-
 
 .tasks-hero__stats p {
   margin: 0;
 
-  color:
-    rgba(255, 255, 255, 0.34);
+  color: rgba(255, 255, 255, 0.34);
 
-  font-family:
-    "Space Mono", monospace;
-
+  font-family: "Space Mono", monospace;
   font-size: 0.5rem;
 
   letter-spacing: 0.1em;
 }
 
-
 .tasks-hero__stats i {
   height: 1px;
 
-  background:
-    rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 
+.track-selector {
+  padding: 125px 0;
 
-/* ======================================
-   JOURNEY OVERVIEW
-====================================== */
+  background: var(--green);
+}
+
+.track-selector__heading {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(260px, 360px);
+
+  align-items: end;
+
+  gap: 90px;
+}
+
+.track-selector__heading .section-number {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: rgba(11, 13, 18, 0.55);
+}
+
+.track-selector__heading h2 {
+  margin: 0;
+
+  font-size: clamp(3.8rem, 6.5vw, 7rem);
+  font-weight: 600;
+
+  line-height: 0.86;
+  letter-spacing: -0.075em;
+}
+
+.track-selector__heading h2 span {
+  display: block;
+
+  color: var(--indigo);
+}
+
+.track-selector__heading > p {
+  margin: 0;
+
+  color: rgba(11, 13, 18, 0.58);
+
+  font-size: 0.87rem;
+  line-height: 1.8;
+}
+
+.track-selector__controls {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto;
+
+  align-items: end;
+
+  gap: 40px;
+
+  margin-top: 80px;
+
+  padding-top: 30px;
+
+  border-top: 1px solid rgba(11, 13, 18, 0.22);
+}
+
+.track-buttons {
+  display: flex;
+
+  gap: 10px;
+}
+
+.track-button {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  min-height: 64px;
+
+  padding: 0 24px;
+
+  cursor: pointer;
+
+  border: 1px solid rgba(11, 13, 18, 0.28);
+
+  background: transparent;
+  color: var(--ink);
+
+  font-size: 0.76rem;
+  font-weight: 800;
+
+  transition:
+    background var(--transition),
+    color var(--transition),
+    transform var(--transition);
+}
+
+.track-button span {
+  font-family: "Space Mono", monospace;
+  font-size: 0.5rem;
+
+  opacity: 0.55;
+}
+
+.track-button:hover {
+  transform: translateY(-3px);
+}
+
+.track-button.active {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.track-button.active span {
+  color: var(--green);
+  opacity: 1;
+}
+
+.current-track {
+  text-align: right;
+}
+
+.current-track span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: rgba(11, 13, 18, 0.48);
+
+  font-family: "Space Mono", monospace;
+  font-size: 0.48rem;
+
+  letter-spacing: 0.1em;
+}
+
+.current-track strong {
+  font-family: "Space Mono", monospace;
+  font-size: 0.78rem;
+
+  letter-spacing: 0.04em;
+}
+
 
 .journey-overview {
   padding: 130px 0 120px;
 
   background: var(--paper-light);
 }
-
 
 .overview-heading {
   display: grid;
@@ -675,7 +716,6 @@ summary {
   gap: 90px;
 }
 
-
 .overview-heading .section-number {
   display: block;
 
@@ -684,26 +724,21 @@ summary {
   color: var(--green);
 }
 
-
 .overview-heading h2 {
   margin: 0;
 
-  font-size:
-    clamp(3.8rem, 6.5vw, 7rem);
-
+  font-size: clamp(3.8rem, 6.5vw, 7rem);
   font-weight: 600;
 
   line-height: 0.86;
   letter-spacing: -0.075em;
 }
 
-
 .overview-heading h2 span {
   display: block;
 
   color: var(--indigo);
 }
-
 
 .overview-heading > p {
   margin: 0;
@@ -714,15 +749,12 @@ summary {
   line-height: 1.8;
 }
 
-
-
 .journey-track {
   display: flex;
   align-items: flex-start;
 
   margin-top: 90px;
 }
-
 
 .journey-track > i {
   flex: 1;
@@ -734,7 +766,6 @@ summary {
   background: var(--border);
 }
 
-
 .journey-point {
   display: flex;
   flex-direction: column;
@@ -745,7 +776,6 @@ summary {
   flex-shrink: 0;
 }
 
-
 .journey-point > span {
   display: grid;
   place-items: center;
@@ -753,18 +783,14 @@ summary {
   width: 46px;
   height: 46px;
 
-  border:
-    1px solid var(--border);
+  border: 1px solid var(--border);
 
   border-radius: 50%;
 
   background: var(--paper-light);
-
   color: var(--grey);
 
-  font-family:
-    "Space Mono", monospace;
-
+  font-family: "Space Mono", monospace;
   font-size: 0.55rem;
 
   transition:
@@ -774,109 +800,26 @@ summary {
     transform var(--transition);
 }
 
-
 .journey-point:hover > span {
   transform: translateY(-4px);
 
   border-color: var(--green);
 }
 
-
 .journey-point small {
   color: var(--grey);
 
-  font-family:
-    "Space Mono", monospace;
-
+  font-family: "Space Mono", monospace;
   font-size: 0.46rem;
 }
-
-
-.journey-point--done > span {
-  border-color: var(--green);
-
-  background: var(--green);
-
-  color: var(--ink);
-}
-
-
-.journey-point--current > span {
-  border-color: var(--green);
-
-  background: var(--ink);
-
-  color: var(--green);
-
-  box-shadow:
-    0 0 0 8px
-    rgba(57, 184, 10, 0.11);
-}
-
 
 .journey-point--final > span {
   border-color: var(--indigo);
 
   background: var(--indigo);
-
   color: var(--white);
 }
 
-
-.journey-legend {
-  display: flex;
-  gap: 30px;
-
-  margin-top: 45px;
-}
-
-
-.journey-legend p {
-  display: flex;
-  align-items: center;
-
-  gap: 8px;
-
-  margin: 0;
-
-  color: var(--grey);
-
-  font-family:
-    "Space Mono", monospace;
-
-  font-size: 0.48rem;
-}
-
-
-.legend-dot {
-  width: 7px;
-  height: 7px;
-
-  border:
-    1px solid var(--border);
-
-  border-radius: 50%;
-}
-
-
-.legend-dot--done {
-  border-color: var(--green);
-
-  background: var(--green);
-}
-
-
-.legend-dot--current {
-  border-color: var(--ink);
-
-  background: var(--ink);
-}
-
-
-
-/* ======================================
-   ROADMAP
-====================================== */
 
 .roadmap {
   padding: 135px 0 150px;
@@ -884,11 +827,9 @@ summary {
   background: var(--paper);
 }
 
-
 .roadmap__heading {
   margin-bottom: 100px;
 }
-
 
 .roadmap__heading .section-number {
   display: block;
@@ -898,19 +839,15 @@ summary {
   color: var(--green);
 }
 
-
 .roadmap__heading h2 {
   margin: 0;
 
-  font-size:
-    clamp(4rem, 7vw, 7.5rem);
-
+  font-size: clamp(4rem, 7vw, 7.5rem);
   font-weight: 600;
 
   line-height: 0.85;
   letter-spacing: -0.08em;
 }
-
 
 .roadmap__heading h2 span {
   display: block;
@@ -918,12 +855,9 @@ summary {
   color: var(--indigo);
 }
 
-
-
 .roadmap__list {
   position: relative;
 }
-
 
 .roadmap__list::before {
   content: "";
@@ -946,7 +880,6 @@ summary {
     );
 }
 
-
 .task {
   position: relative;
 
@@ -959,7 +892,6 @@ summary {
 
   min-height: 500px;
 }
-
 
 .task__marker {
   grid-column: 2;
@@ -974,23 +906,18 @@ summary {
 
   margin-inline: auto;
 
-  border:
-    1px solid var(--border);
+  border: 1px solid var(--border);
 
   border-radius: 50%;
 
   background: var(--paper);
-
   color: var(--grey);
 
-  font-family:
-    "Space Mono", monospace;
-
+  font-family: "Space Mono", monospace;
   font-size: 0.55rem;
 
   z-index: 3;
 }
-
 
 .task__card {
   position: relative;
@@ -1003,8 +930,7 @@ summary {
 
   overflow: hidden;
 
-  border:
-    1px solid var(--border);
+  border: 1px solid var(--border);
 
   background: var(--paper-light);
 
@@ -1013,7 +939,6 @@ summary {
     background var(--transition),
     border-color var(--transition);
 }
-
 
 .task__card::after {
   content: "";
@@ -1031,23 +956,18 @@ summary {
   transform: scaleX(0);
   transform-origin: left;
 
-  transition:
-    transform 420ms var(--ease);
+  transition: transform 420ms var(--ease);
 }
-
 
 .task:hover .task__card {
   transform: translateY(-8px);
 
-  border-color:
-    rgba(57, 184, 10, 0.55);
+  border-color: rgba(57, 184, 10, 0.55);
 }
-
 
 .task:hover .task__card::after {
   transform: scaleX(1);
 }
-
 
 .task--left .task__card {
   grid-column: 1;
@@ -1056,14 +976,12 @@ summary {
   margin-right: 20px;
 }
 
-
 .task--right .task__card {
   grid-column: 3;
   grid-row: 1;
 
   margin-left: 20px;
 }
-
 
 .task__top {
   display: flex;
@@ -1073,31 +991,24 @@ summary {
 
   padding-bottom: 19px;
 
-  border-bottom:
-    1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
-
 
 .task__day,
 .task__status {
-  font-family:
-    "Space Mono", monospace;
-
+  font-family: "Space Mono", monospace;
   font-size: 0.5rem;
 
   letter-spacing: 0.1em;
 }
 
-
 .task__day {
   color: var(--indigo);
 }
 
-
 .task__status {
   color: var(--grey);
 }
-
 
 .task__number {
   position: absolute;
@@ -1105,8 +1016,7 @@ summary {
   top: 43px;
   right: 25px;
 
-  color:
-    rgba(13, 0, 77, 0.045);
+  color: rgba(13, 0, 77, 0.045);
 
   font-size: 10rem;
   font-weight: 800;
@@ -1117,7 +1027,6 @@ summary {
   pointer-events: none;
 }
 
-
 .task__difficulty {
   position: relative;
 
@@ -1125,15 +1034,12 @@ summary {
 
   color: var(--green);
 
-  font-family:
-    "Space Mono", monospace;
-
+  font-family: "Space Mono", monospace;
   font-size: 0.52rem;
   font-weight: 700;
 
   letter-spacing: 0.11em;
 }
-
 
 .task h3 {
   position: relative;
@@ -1142,15 +1048,12 @@ summary {
 
   margin: 0;
 
-  font-size:
-    clamp(2rem, 3vw, 3.1rem);
-
+  font-size: clamp(2rem, 3vw, 3.1rem);
   font-weight: 600;
 
   line-height: 0.96;
   letter-spacing: -0.055em;
 }
-
 
 .task__description {
   position: relative;
@@ -1165,7 +1068,6 @@ summary {
   line-height: 1.75;
 }
 
-
 .task__skills {
   position: relative;
 
@@ -1177,141 +1079,64 @@ summary {
   margin-top: 33px;
 }
 
-
 .task__skills span {
   padding: 6px 8px;
 
-  border:
-    1px solid var(--border);
+  border: 1px solid var(--border);
 
   color: var(--grey);
 
-  font-family:
-    "Space Mono", monospace;
-
+  font-family: "Space Mono", monospace;
   font-size: 0.43rem;
 
   letter-spacing: 0.07em;
 }
 
-
-
-/* COMPLETED */
-
-.task--completed .task__marker {
-  border-color: var(--green);
-
-  background: var(--green);
-
-  color: var(--ink);
-}
-
-
-.task--completed .task__status {
-  color: var(--green);
-}
-
-
-
-/* CURRENT */
-
-.task--current .task__marker {
-  border-color: var(--green);
-
-  background: var(--ink);
-
-  color: var(--green);
-
-  box-shadow:
-    0 0 0 9px
-    rgba(57, 184, 10, 0.11);
-}
-
-
-.task--current .task__card {
-  background: var(--green-pale);
-
-  border-color:
-    rgba(57, 184, 10, 0.5);
-}
-
-
-.task--current .task__status {
-  color: var(--indigo);
-
-  font-weight: 700;
-}
-
-
-
-/* FINAL */
-
 .task--final .task__marker {
   border-color: var(--indigo);
 
   background: var(--indigo);
-
   color: var(--white);
 }
 
-
 .task--final .task__card {
   background: var(--indigo);
-
   color: var(--white);
 
   border-color: var(--indigo);
 }
-
 
 .task--final .task__card::after {
   background: var(--green);
 }
 
-
 .task--final .task__top {
-  border-color:
-    rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.15);
 }
-
 
 .task--final .task__day,
 .task--final .task__difficulty {
   color: var(--green);
 }
 
-
 .task--final .task__status {
-  color:
-    rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.45);
 }
-
 
 .task--final .task__number {
-  color:
-    rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.05);
 }
-
 
 .task--final .task__description {
-  color:
-    rgba(255, 255, 255, 0.48);
+  color: rgba(255, 255, 255, 0.48);
 }
-
 
 .task--final .task__skills span {
-  border-color:
-    rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.18);
 
-  color:
-    rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.55);
 }
 
-
-
-/* ======================================
-   DIFFICULTY
-====================================== */
 
 .difficulty {
   padding: 130px 0;
@@ -1320,11 +1145,9 @@ summary {
   color: var(--white);
 }
 
-
 .difficulty__heading {
   margin-bottom: 80px;
 }
-
 
 .difficulty__heading .section-number {
   display: block;
@@ -1334,19 +1157,15 @@ summary {
   color: var(--green);
 }
 
-
 .difficulty__heading h2 {
   margin: 0;
 
-  font-size:
-    clamp(4rem, 7vw, 7.3rem);
-
+  font-size: clamp(4rem, 7vw, 7.3rem);
   font-weight: 600;
 
   line-height: 0.85;
   letter-spacing: -0.08em;
 }
-
 
 .difficulty__heading h2 span {
   display: block;
@@ -1354,66 +1173,50 @@ summary {
   color: var(--green);
 }
 
-
 .difficulty__track {
   display: grid;
 
   grid-template-columns:
     repeat(4, minmax(0, 1fr));
 
-  border-top:
-    1px solid rgba(255, 255, 255, 0.13);
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
 
-  border-bottom:
-    1px solid rgba(255, 255, 255, 0.13);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
 }
-
 
 .difficulty__track article {
   min-height: 360px;
 
   padding: 30px;
 
-  border-right:
-    1px solid rgba(255, 255, 255, 0.13);
+  border-right: 1px solid rgba(255, 255, 255, 0.13);
 }
-
 
 .difficulty__track article:last-child {
   border-right: 0;
 
-  background:
-    rgba(57, 184, 10, 0.07);
+  background: rgba(57, 184, 10, 0.07);
 }
-
 
 .difficulty__track article > span {
   color: var(--green);
 
-  font-family:
-    "Space Mono", monospace;
-
+  font-family: "Space Mono", monospace;
   font-size: 0.55rem;
 }
-
 
 .difficulty__track article > div {
   margin-top: 100px;
 }
 
-
 .difficulty__track small {
-  color:
-    rgba(255, 255, 255, 0.32);
+  color: rgba(255, 255, 255, 0.32);
 
-  font-family:
-    "Space Mono", monospace;
-
+  font-family: "Space Mono", monospace;
   font-size: 0.48rem;
 
   letter-spacing: 0.1em;
 }
-
 
 .difficulty__track h3 {
   margin: 8px 0 17px;
@@ -1424,22 +1227,15 @@ summary {
   line-height: 1.05;
 }
 
-
 .difficulty__track p {
   margin: 0;
 
-  color:
-    rgba(255, 255, 255, 0.42);
+  color: rgba(255, 255, 255, 0.42);
 
   font-size: 0.76rem;
   line-height: 1.7;
 }
 
-
-
-/* ======================================
-   FINAL MILESTONE
-====================================== */
 
 .milestone {
   position: relative;
@@ -1450,7 +1246,6 @@ summary {
 
   background: var(--green);
 }
-
 
 .milestone__grid {
   position: absolute;
@@ -1474,19 +1269,15 @@ summary {
   background-size: 80px 80px;
 }
 
-
 .milestone__giant {
   position: absolute;
 
   right: -5vw;
   bottom: -10vw;
 
-  color:
-    rgba(11, 13, 18, 0.08);
+  color: rgba(11, 13, 18, 0.08);
 
-  font-size:
-    clamp(25rem, 50vw, 55rem);
-
+  font-size: clamp(25rem, 50vw, 55rem);
   font-weight: 800;
 
   line-height: 0.7;
@@ -1495,15 +1286,12 @@ summary {
   user-select: none;
 }
 
-
 .milestone__inner {
   position: relative;
   z-index: 2;
 
-  padding:
-    55px 0 110px;
+  padding: 55px 0 110px;
 }
-
 
 .milestone__top {
   display: flex;
@@ -1513,26 +1301,20 @@ summary {
 
   padding-bottom: 24px;
 
-  border-bottom:
-    1px solid rgba(11, 13, 18, 0.25);
+  border-bottom: 1px solid rgba(11, 13, 18, 0.25);
 }
-
 
 .milestone__top p,
 .milestone__top span {
   margin: 0;
 
-  color:
-    rgba(11, 13, 18, 0.58);
+  color: rgba(11, 13, 18, 0.58);
 
-  font-family:
-    "Space Mono", monospace;
-
+  font-family: "Space Mono", monospace;
   font-size: 0.55rem;
 
   letter-spacing: 0.11em;
 }
-
 
 .milestone__content {
   display: grid;
@@ -1548,29 +1330,23 @@ summary {
   padding-top: 120px;
 }
 
-
 .milestone .eyebrow {
   margin-bottom: 24px;
 
-  color:
-    rgba(11, 13, 18, 0.55);
+  color: rgba(11, 13, 18, 0.55);
 }
-
 
 .milestone h2 {
   max-width: 850px;
 
   margin: 0;
 
-  font-size:
-    clamp(5rem, 9vw, 9.5rem);
-
+  font-size: clamp(5rem, 9vw, 9.5rem);
   font-weight: 600;
 
   line-height: 0.77;
   letter-spacing: -0.09em;
 }
-
 
 .milestone h2 span {
   display: block;
@@ -1578,17 +1354,14 @@ summary {
   color: var(--indigo);
 }
 
-
 .milestone__aside > p {
   margin: 0;
 
-  color:
-    rgba(11, 13, 18, 0.62);
+  color: rgba(11, 13, 18, 0.62);
 
   font-size: 0.87rem;
   line-height: 1.8;
 }
-
 
 .milestone__steps {
   display: flex;
@@ -1599,25 +1372,19 @@ summary {
 
   margin-top: 30px;
 
-  font-family:
-    "Space Mono", monospace;
-
+  font-family: "Space Mono", monospace;
   font-size: 0.48rem;
 }
-
 
 .milestone__steps span {
   padding: 7px 8px;
 
-  border:
-    1px solid rgba(11, 13, 18, 0.3);
+  border: 1px solid rgba(11, 13, 18, 0.3);
 }
-
 
 .milestone__steps b {
   color: var(--indigo);
 }
-
 
 .milestone__aside > a {
   display: flex;
@@ -1639,13 +1406,11 @@ summary {
     background var(--transition);
 }
 
-
 .milestone__aside > a:hover {
   transform: translateY(-4px);
 
   background: var(--indigo);
 }
-
 
 .milestone__aside > a strong {
   color: var(--green);
@@ -1654,19 +1419,12 @@ summary {
 }
 
 
-
-/* ======================================
-   FOOTER
-====================================== */
-
 .footer {
-  padding:
-    70px 0 28px;
+  padding: 70px 0 28px;
 
   background: var(--ink);
   color: var(--white);
 }
-
 
 .footer__top {
   display: flex;
@@ -1677,34 +1435,28 @@ summary {
 
   padding-bottom: 45px;
 
-  border-bottom:
-    1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 
 .footer__brand {
   width: 190px;
 }
 
-
 .footer__brand img {
   width: 100%;
 }
-
 
 .footer__top > p {
   max-width: 270px;
 
   margin: 0;
 
-  color:
-    rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.35);
 
   font-size: 0.73rem;
 
   text-align: right;
 }
-
 
 .footer__main {
   display: grid;
@@ -1717,31 +1469,24 @@ summary {
   padding-block: 60px;
 }
 
-
 .footer__statement > span {
   color: var(--green);
 
-  font-family:
-    "Space Mono", monospace;
-
+  font-family: "Space Mono", monospace;
   font-size: 0.53rem;
 
   letter-spacing: 0.12em;
 }
 
-
 .footer__statement h2 {
   margin: 16px 0 0;
 
-  font-size:
-    clamp(3rem, 5vw, 5rem);
-
+  font-size: clamp(3rem, 5vw, 5rem);
   font-weight: 600;
 
   line-height: 0.88;
   letter-spacing: -0.065em;
 }
-
 
 .footer__links {
   display: grid;
@@ -1752,7 +1497,6 @@ summary {
   gap: 50px;
 }
 
-
 .footer__links > div {
   display: flex;
   flex-direction: column;
@@ -1762,36 +1506,28 @@ summary {
   gap: 12px;
 }
 
-
 .footer__links > div > span {
   margin-bottom: 10px;
 
   color: var(--green);
 
-  font-family:
-    "Space Mono", monospace;
-
+  font-family: "Space Mono", monospace;
   font-size: 0.5rem;
 
   letter-spacing: 0.12em;
 }
 
-
 .footer__links a {
-  color:
-    rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
 
   font-size: 0.75rem;
 
-  transition:
-    color var(--transition);
+  transition: color var(--transition);
 }
-
 
 .footer__links a:hover {
   color: var(--white);
 }
-
 
 .footer__bottom {
   display: flex;
@@ -1801,30 +1537,20 @@ summary {
 
   padding-top: 25px;
 
-  border-top:
-    1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
-
 
 .footer__bottom p {
   margin: 0;
 
-  color:
-    rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.25);
 
-  font-family:
-    "Space Mono", monospace;
-
+  font-family: "Space Mono", monospace;
   font-size: 0.5rem;
 
   letter-spacing: 0.08em;
 }
 
-
-
-/* ======================================
-   TABLET
-====================================== */
 
 @media (max-width: 1000px) {
 
@@ -1833,21 +1559,17 @@ summary {
     display: none;
   }
 
-
   .mobile-menu {
     display: block;
   }
-
 
   .tasks-hero {
     min-height: auto;
   }
 
-
   .tasks-hero__inner {
     min-height: auto;
   }
-
 
   .tasks-hero__content {
     grid-template-columns: 1fr;
@@ -1857,18 +1579,16 @@ summary {
     padding-block: 90px;
   }
 
-
   .tasks-hero__aside {
     max-width: 520px;
   }
 
-
+  .track-selector__heading,
   .overview-heading {
     grid-template-columns: 1fr;
 
     gap: 40px;
   }
-
 
   .journey-track {
     overflow-x: auto;
@@ -1876,11 +1596,9 @@ summary {
     padding-bottom: 20px;
   }
 
-
   .journey-track > i {
     min-width: 55px;
   }
-
 
   .task {
     grid-template-columns:
@@ -1889,23 +1607,18 @@ summary {
       minmax(0, 1fr);
   }
 
-
   .difficulty__track {
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
   }
 
-
   .difficulty__track article:nth-child(2) {
     border-right: 0;
   }
 
-
   .difficulty__track article:nth-child(-n+2) {
-    border-bottom:
-      1px solid rgba(255, 255, 255, 0.13);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
   }
-
 
   .milestone__content {
     grid-template-columns: 1fr;
@@ -1913,11 +1626,9 @@ summary {
     gap: 60px;
   }
 
-
   .milestone__aside {
     max-width: 520px;
   }
-
 
   .footer__main {
     gap: 60px;
@@ -1926,57 +1637,39 @@ summary {
 }
 
 
-
-/* ======================================
-   MOBILE
-====================================== */
-
 @media (max-width: 700px) {
 
   :root {
     --header-height: 68px;
   }
 
-
   .container {
-    width:
-      min(calc(100% - 32px), var(--container));
+    width: min(calc(100% - 32px), var(--container));
   }
-
 
   .header {
     height: var(--header-height);
   }
 
-
   .brand {
     width: 145px;
   }
 
-
   .mobile-nav {
     top: var(--header-height);
 
-    padding:
-      18px 16px 22px;
+    padding: 18px 16px 22px;
   }
-
-
-
-  /* HERO */
 
   .tasks-hero__grid {
-    background-size:
-      48px 48px;
+    background-size: 48px 48px;
   }
-
 
   .tasks-hero__giant {
     right: -25vw;
 
     font-size: 28rem;
   }
-
 
   .tasks-hero__top {
     align-items: flex-start;
@@ -1985,83 +1678,81 @@ summary {
     gap: 16px;
   }
 
-
   .tasks-hero__content {
-    padding-block:
-      70px 60px;
+    padding-block: 70px 60px;
   }
 
-
   .tasks-hero h1 {
-    font-size:
-      clamp(4rem, 19vw, 6rem);
+    font-size: clamp(4rem, 19vw, 6rem);
 
     line-height: 0.8;
   }
 
-
   .tasks-hero__stats {
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
 
     gap: 16px;
   }
-
 
   .tasks-hero__stats i {
     width: 100%;
   }
 
+  .track-selector {
+    padding: 90px 0;
+  }
 
+  .track-selector__heading h2 {
+    font-size: clamp(3.5rem, 16vw, 5rem);
+  }
 
-  /* OVERVIEW */
+  .track-selector__controls {
+    grid-template-columns: 1fr;
+
+    margin-top: 55px;
+  }
+
+  .track-buttons {
+    flex-direction: column;
+  }
+
+  .track-button {
+    justify-content: space-between;
+
+    width: 100%;
+  }
+
+  .current-track {
+    text-align: left;
+  }
 
   .journey-overview {
-    padding:
-      90px 0 85px;
+    padding: 90px 0 85px;
   }
-
 
   .overview-heading h2 {
-    font-size:
-      clamp(3.5rem, 16vw, 5rem);
+    font-size: clamp(3.5rem, 16vw, 5rem);
   }
-
 
   .journey-track {
     margin-top: 60px;
   }
 
-
-  .journey-legend {
-    flex-wrap: wrap;
-  }
-
-
-
-  /* ROADMAP */
-
   .roadmap {
-    padding:
-      90px 0 100px;
+    padding: 90px 0 100px;
   }
-
 
   .roadmap__heading {
     margin-bottom: 70px;
   }
 
-
   .roadmap__heading h2 {
-    font-size:
-      clamp(3.7rem, 17vw, 5.4rem);
+    font-size: clamp(3.7rem, 17vw, 5.4rem);
   }
-
 
   .roadmap__list::before {
     left: 24px;
   }
-
 
   .task {
     display: grid;
@@ -2074,7 +1765,6 @@ summary {
     padding-bottom: 65px;
   }
 
-
   .task__marker {
     grid-column: 1;
     grid-row: 1;
@@ -2085,7 +1775,6 @@ summary {
     margin: 0;
   }
 
-
   .task--left .task__card,
   .task--right .task__card {
     grid-column: 2;
@@ -2094,78 +1783,55 @@ summary {
     margin: 0 0 0 20px;
   }
 
-
   .task__card {
     min-height: auto;
 
     padding: 26px;
   }
 
-
   .task__number {
     font-size: 7rem;
   }
-
 
   .task__difficulty {
     margin-top: 55px;
   }
 
-
   .task h3 {
-    font-size:
-      clamp(2rem, 10vw, 2.8rem);
+    font-size: clamp(2rem, 10vw, 2.8rem);
   }
-
-
-
-  /* DIFFICULTY */
 
   .difficulty {
-    padding:
-      90px 0;
+    padding: 90px 0;
   }
-
 
   .difficulty__heading h2 {
-    font-size:
-      clamp(3.8rem, 16vw, 5.4rem);
+    font-size: clamp(3.8rem, 16vw, 5.4rem);
   }
-
 
   .difficulty__track {
     grid-template-columns: 1fr;
   }
-
 
   .difficulty__track article {
     min-height: 280px;
 
     border-right: 0;
 
-    border-bottom:
-      1px solid rgba(255, 255, 255, 0.13);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
   }
-
 
   .difficulty__track article > div {
     margin-top: 60px;
   }
 
-
-
-  /* MILESTONE */
-
   .milestone {
     min-height: auto;
   }
 
-
   .milestone__grid {
-    background-size:
-      48px 48px;
+    background-size: 48px 48px;
   }
-
 
   .milestone__giant {
     right: -25vw;
@@ -2173,12 +1839,9 @@ summary {
     font-size: 30rem;
   }
 
-
   .milestone__inner {
-    padding:
-      45px 0 85px;
+    padding: 45px 0 85px;
   }
-
 
   .milestone__top {
     align-items: flex-start;
@@ -2187,33 +1850,24 @@ summary {
     gap: 10px;
   }
 
-
   .milestone__content {
     padding-top: 80px;
   }
 
-
   .milestone h2 {
-    font-size:
-      clamp(4.3rem, 19vw, 6.3rem);
+    font-size: clamp(4.3rem, 19vw, 6.3rem);
 
     line-height: 0.78;
   }
-
-
-
-  /* FOOTER */
 
   .footer__top {
     align-items: flex-start;
     flex-direction: column;
   }
 
-
   .footer__top > p {
     text-align: left;
   }
-
 
   .footer__main {
     grid-template-columns: 1fr;
@@ -2221,11 +1875,9 @@ summary {
     gap: 55px;
   }
 
-
   .footer__links {
     gap: 30px;
   }
-
 
   .footer__bottom {
     align-items: flex-start;
@@ -2237,54 +1889,44 @@ summary {
 }
 
 
-
 @media (max-width: 430px) {
 
   .container {
-    width:
-      min(calc(100% - 28px), var(--container));
+    width: min(calc(100% - 28px), var(--container));
   }
-
 
   .brand {
     width: 132px;
   }
 
-
   .tasks-hero h1 {
     font-size: 3.8rem;
   }
 
-
+  .track-selector__heading h2,
   .overview-heading h2 {
     font-size: 3.5rem;
   }
-
 
   .roadmap__heading h2 {
     font-size: 3.6rem;
   }
 
-
   .task__card {
     padding: 22px;
   }
-
 
   .task h3 {
     font-size: 2rem;
   }
 
-
   .difficulty__heading h2 {
     font-size: 3.6rem;
   }
 
-
   .milestone h2 {
     font-size: 4rem;
   }
-
 
   .footer__links {
     grid-template-columns: 1fr;
@@ -2295,23 +1937,16 @@ summary {
 }
 
 
-
-/* ======================================
-   ACCESSIBILITY
-====================================== */
-
 @media (prefers-reduced-motion: reduce) {
 
   html {
     scroll-behavior: auto;
   }
 
-
   *,
   *::before,
   *::after {
-    transition-duration:
-      0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 
 }

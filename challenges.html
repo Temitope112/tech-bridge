@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Take on practical TechBridge challenges in Data Analytics and Web Development.">
+
+  <title>Challenges | TechBridge</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="challenges.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+
+      <a href="index.html" class="brand" aria-label="TechBridge home">
+        <img src="images/techbridge-logo.png" alt="TechBridge">
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="index.html#about">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="tasks.html">Internship Tasks</a>
+
+        <a href="challenges.html" class="nav-active" aria-current="page">
+          Challenges
+        </a>
+
+         <a href="#contact">
+            Contact
+          </a>
+          
+        <a href="index.html#community">Community</a>
+      </nav>
+
+      <a href="https://forms.gle/8EbdSy5ttGfLZfjv5" target="_blank" rel="noopener noreferrer" class="header__apply">
+        Apply now
+        <span>↗</span>
+      </a>
+
+      <details class="mobile-menu">
+
+        <summary aria-label="Open navigation">
+          <span></span>
+          <span></span>
+        </summary>
+
+        <nav class="mobile-nav" aria-label="Mobile navigation">
+
+          <a href="index.html">Home</a>
+          <a href="programs.html">Programs</a>
+          <a href="tasks.html">Internship Tasks</a>
+
+          <a href="challenges.html" class="mobile-nav__active" aria-current="page">
+            Challenges
+          </a>
+
+          <a href="index.html#community">Community</a>
+          <a href="#contact">
+            Contact
+          </a>
+
+
+          <a href="https://forms.gle/8EbdSy5ttGfLZfjv5" target="_blank" rel="noopener noreferrer"
+            class="mobile-nav__apply">
+            Apply for Internship ↗
+          </a>
+
+        </nav>
+
+      </details>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="challenge-hero">
+
+      <div class="challenge-hero__grid" aria-hidden="true"></div>
+
+      <div class="challenge-hero__giant" aria-hidden="true">
+        06
+      </div>
+
+      <div class="container challenge-hero__inner">
+
+        <div class="challenge-hero__top">
+
+          <p class="eyebrow">
+            TECHBRIDGE / CHALLENGE HUB
+          </p>
+
+          <div class="hero-status">
+            <span></span>
+            <p>06 LIVE CHALLENGES</p>
+          </div>
+
+        </div>
+
+
+        <div class="challenge-hero__content">
+
+          <div class="challenge-hero__title">
+
+            <p class="hero-kicker">
+              LEARN → PRACTICE → PROVE
+            </p>
+
+            <h1>
+              Enough
+              <span>theory.</span>
+
+              Build
+              <em>something.</em>
+            </h1>
+
+          </div>
+
+
+          <div class="challenge-hero__aside">
+
+            <p>
+              Practical challenges designed to test how well
+              you can turn what you've learned into actual work.
+            </p>
+
+            <div class="hero-tracks">
+
+              <button type="button" data-hero-track="Data Analytics">
+                <span>01</span>
+                <strong>Data Analytics</strong>
+                <b>↘</b>
+              </button>
+
+              <button type="button" data-hero-track="Web Development">
+                <span>02</span>
+                <strong>Web Development</strong>
+                <b>↘</b>
+              </button>
+
+            </div>
+
+            <a href="#challenge-board" class="hero-explore">
+              <span>Explore challenges</span>
+              <b>↓</b>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="challenge-hero__footer">
+
+          <div>
+            <strong>06</strong>
+            <span>CHALLENGES</span>
+          </div>
+
+          <i></i>
+
+          <div>
+            <strong>02</strong>
+            <span>TRACKS</span>
+          </div>
+
+          <i></i>
+
+          <div>
+            <strong>03</strong>
+            <span>LEVELS</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CHALLENGE BOARD -->
+
+    <section class="challenge-board" id="challenge-board">
+
+      <div class="container">
+
+        <div class="board-intro">
+
+          <div>
+
+            <span class="section-number">
+              01 / CHALLENGE BOARD
+            </span>
+
+            <h2>
+              What are you
+              <span>building next?</span>
+            </h2>
+
+          </div>
+
+
+          <div class="board-intro__aside">
+
+            <span>
+              / THE WORK
+            </span>
+
+            <p>
+              Choose a track and difficulty level.
+              Open the brief, understand the problem
+              and figure out how you would solve it.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- FILTERS -->
+
+        <div class="board-controls">
+
+          <div class="filter-group">
+
+            <p>TRACK</p>
+
+            <div class="filter-options">
+
+              <button type="button" class="filter-button active" data-track="All">
+                ALL
+                <span>06</span>
+              </button>
+
+              <button type="button" class="filter-button" data-track="Data Analytics">
+                DATA
+                <span>03</span>
+              </button>
+
+              <button type="button" class="filter-button" data-track="Web Development">
+                WEB
+                <span>03</span>
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <div class="filter-group">
+
+            <p>DIFFICULTY</p>
+
+            <div class="filter-options">
+
+              <button type="button" class="filter-button active" data-difficulty="All">
+                ALL
+              </button>
+
+              <button type="button" class="filter-button" data-difficulty="Beginner">
+                BEGINNER
+              </button>
+
+              <button type="button" class="filter-button" data-difficulty="Intermediate">
+                INTERMEDIATE
+              </button>
+
+              <button type="button" class="filter-button" data-difficulty="Advanced">
+                ADVANCED
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="board-result">
+
+          <p>
+            SHOWING
+            <strong id="challenge-count">06</strong>
+            CHALLENGES
+          </p>
+
+          <button type="button" id="reset-filters">
+            RESET FILTERS ↺
+          </button>
+
+        </div>
+
+
+        <!-- JS RENDERS CARDS HERE -->
+
+        <div class="challenge-grid" id="challenge-grid" aria-live="polite"></div>
+
+
+        <!-- EMPTY STATE -->
+
+        <div class="empty-state" id="empty-state" hidden>
+
+          <span>00</span>
+
+          <div>
+
+            <p>NO MATCH FOUND</p>
+
+            <h3>
+              Nothing here.
+              <br>
+              Try another combination.
+            </h3>
+
+            <button type="button" id="empty-reset">
+              Reset filters →
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- MANIFESTO -->
+
+    <section class="challenge-manifesto">
+
+      <div class="challenge-manifesto__grid" aria-hidden="true"></div>
+
+      <div class="container challenge-manifesto__inner">
+
+        <div class="manifesto-meta">
+
+          <span>02 / YOUR MOVE</span>
+          <span>TECHBRIDGE / 2026</span>
+
+        </div>
+
+
+        <div class="manifesto-content">
+
+          <p>
+            WATCHING ISN'T BUILDING
+          </p>
+
+          <h2>
+            You don't learn
+            by watching.
+
+            <span>
+              You learn
+              by building.
+            </span>
+          </h2>
+
+        </div>
+
+
+        <div class="manifesto-bottom">
+
+          <p>
+            Pick a challenge. Make mistakes.
+            Figure it out. Improve.
+          </p>
+
+          <a href="#challenge-board">
+            CHOOSE A CHALLENGE
+            <span>↑</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- PANEL OVERLAY -->
+
+  <div class="challenge-overlay" id="challenge-overlay" aria-hidden="true"></div>
+
+
+  <!-- CHALLENGE BRIEF -->
+
+  <aside class="challenge-panel" id="challenge-panel" aria-hidden="true" aria-labelledby="panel-title">
+
+    <div class="challenge-panel__header">
+
+      <span id="panel-index">
+        CH / 01
+      </span>
+
+      <span class="panel-header-track" id="panel-header-track">
+        DATA ANALYTICS
+      </span>
+
+      <button type="button" id="close-panel" aria-label="Close challenge details">
+        ×
+      </button>
+
+    </div>
+
+    <div class="challenge-panel__content" id="challenge-panel-content"></div>
+
+  </aside>
+
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer__top">
+
+        <a href="index.html" class="footer__brand" aria-label="TechBridge homepage">
+          <img src="images/techbridge-logo.png" alt="TechBridge">
+        </a>
+
+        <p>
+          Bridging Learning to
+          Real-World Experience
+        </p>
+
+      </div>
+
+
+      <div class="footer__main">
+
+        <div class="footer__statement">
+
+          <span>TECHBRIDGE</span>
+
+          <h2>
+            Learn it.
+            <br>
+            Use it.
+          </h2>
+
+        </div>
+
+
+        <div class="footer__links">
+
+          <div>
+
+            <span>NAVIGATE</span>
+
+            <a href="index.html">Home</a>
+            <a href="programs.html">Programs</a>
+            <a href="tasks.html">Internship Tasks</a>
+            <a href="challenges.html">Challenges</a>
+
+          </div>
+
+
+          <div>
+
+            <span>CONNECT</span>
+
+            <a href="https://chat.whatsapp.com/FqpBvYS4oaK32cXDxc8JIS" target="_blank" rel="noopener noreferrer">
+              Community ↗
+            </a>
+
+            <a href="mailto:techbridgebaslink@gmail.com">
+              Email us ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer__bottom">
+
+        <p>
+          © 2026 TechBridge by Baselink Services Limited
+        </p>
+
+        <p>
+          LEARN → PRACTICE → EXPERIENCE
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script src="challenges.js"></script>
+
+</body>
+
+</html>

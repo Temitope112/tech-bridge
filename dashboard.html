@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="TechBridge Intern Dashboard"
+  />
+
+  <title>Intern Dashboard | TechBridge</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+
+  <div class="dashboard">
+
+    <aside class="sidebar" id="sidebar">
+
+      <div class="sidebar__top">
+
+        <a
+          href="index.html"
+          class="sidebar__brand"
+          aria-label="TechBridge home"
+        >
+          <img
+            src="images/techbridge-logo.png"
+            alt="TechBridge"
+          />
+        </a>
+
+        <button
+          class="sidebar__close"
+          id="close-sidebar"
+          type="button"
+          aria-label="Close sidebar"
+        >
+          ×
+        </button>
+
+      </div>
+
+      <div class="sidebar__workspace">
+
+        <span>WORKSPACE</span>
+
+        <strong>
+          30-Day Internship
+        </strong>
+
+        <small>
+          Web Development
+        </small>
+
+      </div>
+
+      <nav
+        class="sidebar__nav"
+        aria-label="Dashboard navigation"
+      >
+
+        <span class="sidebar__label">
+          DASHBOARD
+        </span>
+
+        <a
+          href="#overview"
+          class="sidebar__link active"
+          data-section="overview"
+        >
+          <span class="sidebar__icon">01</span>
+          <span>Overview</span>
+        </a>
+
+        <a
+          href="#tasks"
+          class="sidebar__link"
+          data-section="tasks"
+        >
+          <span class="sidebar__icon">02</span>
+          <span>My Tasks</span>
+          <small>8</small>
+        </a>
+
+        <a
+          href="#technologies"
+          class="sidebar__link"
+          data-section="technologies"
+        >
+          <span class="sidebar__icon">03</span>
+          <span>Learn</span>
+        </a>
+
+        <a
+          href="#profile"
+          class="sidebar__link"
+          data-section="profile"
+        >
+          <span class="sidebar__icon">04</span>
+          <span>Profile</span>
+        </a>
+
+        <span class="sidebar__label sidebar__label--second">
+          INTERNSHIP
+        </span>
+
+        <a
+          href="tasks.html"
+          class="sidebar__link"
+        >
+          <span class="sidebar__icon">↗</span>
+          <span>Roadmap</span>
+        </a>
+
+        <a
+          href="challenges.html"
+          class="sidebar__link"
+        >
+          <span class="sidebar__icon">↗</span>
+          <span>Challenge Hub</span>
+          <small>6</small>
+        </a>
+
+      </nav>
+
+      <div class="sidebar__footer">
+
+        <div class="sidebar__progress">
+
+          <div>
+            <span>INTERNSHIP PROGRESS</span>
+
+            <strong id="sidebar-percentage">
+              62.5%
+            </strong>
+          </div>
+
+          <div class="sidebar__progress-bar">
+            <span id="sidebar-progress-fill"></span>
+          </div>
+
+          <p id="sidebar-progress-text">
+            5 of 8 tasks completed
+          </p>
+
+        </div>
+
+      </div>
+
+    </aside>
+
+    <div
+      class="sidebar-overlay"
+      id="sidebar-overlay"
+    ></div>
+
+    <div class="dashboard__main">
+
+      <header class="topbar">
+
+        <div class="topbar__left">
+
+          <button
+            class="topbar__menu"
+            id="open-sidebar"
+            type="button"
+            aria-label="Open navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div>
+
+            <span class="topbar__eyebrow">
+              TECHBRIDGE / INTERN PORTAL
+            </span>
+
+            <h1 id="page-heading">
+              Overview
+            </h1>
+
+          </div>
+
+        </div>
+
+        <div class="topbar__right">
+
+          <div class="topbar__date">
+            <span>TODAY</span>
+            <strong id="current-date">—</strong>
+          </div>
+
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Toggle theme"
+          >
+            <span id="theme-icon">◐</span>
+          </button>
+
+          <a
+            href="#profile"
+            class="topbar__profile"
+          >
+
+            <div class="topbar__avatar">
+              AJ
+            </div>
+
+            <div class="topbar__profile-copy">
+              <strong>Alex Joe</strong>
+              <span>Web Development</span>
+            </div>
+
+            <span class="topbar__profile-arrow">
+              ↓
+            </span>
+
+          </a>
+
+        </div>
+
+      </header>
+
+      <main class="dashboard__content">
+
+        <section
+          class="dashboard-section overview"
+          id="overview"
+        >
+
+          <div class="welcome">
+
+            <div class="welcome__content">
+
+              <div class="welcome__meta">
+
+                <span>
+                  WEB DEVELOPMENT INTERN
+                </span>
+
+                <span class="live-status">
+                  <i></i>
+                  IN PROGRESS
+                </span>
+
+              </div>
+
+              <h2>
+                Welcome back,
+                <strong>Alex.</strong>
+              </h2>
+
+              <p>
+                Keep building. Your internship progress,
+                current task and practical challenges are
+                all here.
+              </p>
+
+            </div>
+
+            <div
+              class="welcome__number"
+              id="welcome-task-number"
+              aria-hidden="true"
+            >
+              06
+            </div>
+
+          </div>
+
+          <div class="overview-grid">
+
+            <article class="progress-card">
+
+              <div class="card-heading">
+
+                <div>
+                  <span>INTERNSHIP PROGRESS</span>
+                  <h3>Your journey</h3>
+                </div>
+
+                <span id="progress-fraction">
+                  5 / 8
+                </span>
+
+              </div>
+
+              <div class="progress-card__main">
+
+                <strong id="progress-percentage">
+                  62.5%
+                </strong>
+
+                <p>
+                  of your practical internship
+                  completed
+                </p>
+
+              </div>
+
+              <div class="main-progress">
+                <span id="main-progress-fill"></span>
+              </div>
+
+              <div class="progress-card__stats">
+
+                <div>
+                  <strong id="completed-count">05</strong>
+                  <span>COMPLETED</span>
+                </div>
+
+                <div>
+                  <strong id="remaining-count">03</strong>
+                  <span>REMAINING</span>
+                </div>
+
+                <div>
+                  <strong>08</strong>
+                  <span>TOTAL</span>
+                </div>
+
+              </div>
+
+            </article>
+
+            <article class="countdown-card">
+
+              <div class="card-heading">
+
+                <div>
+                  <span>INTERNSHIP PROGRAM</span>
+                  <h3>Keep moving</h3>
+                </div>
+
+                <span>30 DAYS</span>
+
+              </div>
+
+              <div class="countdown-card__value">
+
+                <strong>30</strong>
+
+                <div>
+                  <span>DAYS</span>
+                  <p>PROGRAM</p>
+                </div>
+
+              </div>
+
+              <p class="countdown-card__copy">
+                Consistency beats rushing.
+                Keep completing one practical
+                milestone at a time.
+              </p>
+
+            </article>
+
+          </div>
+
+          <article
+            class="current-task-card"
+            id="current-task-card"
+          >
+
+            <div class="current-task-card__label">
+
+              <span>CURRENT TASK</span>
+
+              <strong id="current-task-number">
+                06
+              </strong>
+
+            </div>
+
+            <div class="current-task-card__body">
+
+              <div class="current-task-card__meta">
+
+                <span id="current-task-day">
+                  CURRENT
+                </span>
+
+                <span
+                  class="status-badge status-badge--in-progress"
+                  id="current-task-status"
+                >
+                  IN PROGRESS
+                </span>
+
+              </div>
+
+              <h3 id="current-task-title">
+                TechBridge Intern Dashboard
+              </h3>
+
+              <p id="current-task-description">
+                Build an interactive dashboard where interns
+                can manage tasks, monitor progress and explore
+                modern web technologies.
+              </p>
+
+              <div
+                class="current-task-card__skills"
+                id="current-task-skills"
+              ></div>
+
+            </div>
+
+            <div class="current-task-card__action">
+
+              <button
+                type="button"
+                id="continue-task"
+              >
+                Continue Task
+                <span>→</span>
+              </button>
+
+            </div>
+
+          </article>
+
+          <div class="quick-grid">
+
+            <a
+              href="challenges.html"
+              class="quick-card quick-card--challenge"
+            >
+
+              <div>
+                <span>CHALLENGE HUB</span>
+                <strong>06</strong>
+              </div>
+
+              <h3>
+                Test what you've learned.
+              </h3>
+
+              <p>
+                Six practical challenges are
+                waiting for you.
+              </p>
+
+              <span class="quick-card__arrow">
+                ↗
+              </span>
+
+            </a>
+
+            <a
+              href="tasks.html"
+              class="quick-card"
+            >
+
+              <div>
+                <span>ROADMAP</span>
+                <strong>08</strong>
+              </div>
+
+              <h3>
+                See the full journey.
+              </h3>
+
+              <p>
+                Review every internship milestone
+                from the beginning to the final project.
+              </p>
+
+              <span class="quick-card__arrow">
+                ↗
+              </span>
+
+            </a>
+
+            <button
+              type="button"
+              class="quick-card"
+              id="open-current-task"
+            >
+
+              <div>
+                <span>PICK UP WHERE YOU LEFT</span>
+                <strong>→</strong>
+              </div>
+
+              <h3>
+                Continue building.
+              </h3>
+
+              <p>
+                Jump directly into the task
+                currently marked as in progress.
+              </p>
+
+              <span class="quick-card__arrow">
+                →
+              </span>
+
+            </button>
+
+          </div>
+
+        </section>
+
+        <section
+          class="dashboard-section tasks"
+          id="tasks"
+        >
+
+          <div class="section-header">
+
+            <div>
+
+              <span>
+                02 / TASK TRACKER
+              </span>
+
+              <h2>
+                My Tasks
+              </h2>
+
+              <p>
+                Search, filter and update your practical
+                internship progress from one place.
+              </p>
+
+            </div>
+
+            <div class="section-header__summary">
+
+              <strong id="task-summary-completed">
+                5
+              </strong>
+
+              <span>
+                OF 8 COMPLETE
+              </span>
+
+            </div>
+
+          </div>
+
+          <div class="task-toolbar">
+
+            <label class="search-box">
+
+              <span class="search-box__icon">
+                ⌕
+              </span>
+
+              <input
+                type="search"
+                id="task-search"
+                placeholder="Search tasks, skills or difficulty..."
+                autocomplete="off"
+              />
+
+            </label>
+
+            <div
+              class="task-filters"
+              id="task-filters"
+            >
+
+              <button
+                type="button"
+                class="task-filter active"
+                data-filter="all"
+              >
+                All
+                <span id="all-count">8</span>
+              </button>
+
+              <button
+                type="button"
+                class="task-filter"
+                data-filter="completed"
+              >
+                Completed
+                <span id="completed-filter-count">5</span>
+              </button>
+
+              <button
+                type="button"
+                class="task-filter"
+                data-filter="in-progress"
+              >
+                In Progress
+                <span id="progress-filter-count">1</span>
+              </button>
+
+              <button
+                type="button"
+                class="task-filter"
+                data-filter="not-started"
+              >
+                Not Started
+                <span id="not-started-filter-count">2</span>
+              </button>
+
+            </div>
+
+          </div>
+
+          <div class="task-table">
+
+            <div class="task-table__header">
+
+              <span>TASK</span>
+              <span>TITLE</span>
+              <span>DIFFICULTY</span>
+              <span>STATUS</span>
+              <span>ACTION</span>
+
+            </div>
+
+            <div id="task-list"></div>
+
+          </div>
+
+          <div
+            class="empty-state"
+            id="empty-state"
+            hidden
+          >
+
+            <span>00</span>
+
+            <h3>
+              No tasks found.
+            </h3>
+
+            <p>
+              Change your search or filter
+              and try again.
+            </p>
+
+            <button
+              type="button"
+              id="reset-filters"
+            >
+              Reset filters
+            </button>
+
+          </div>
+
+        </section>
+
+        <section
+          class="dashboard-section technologies"
+          id="technologies"
+        >
+
+          <div class="section-header">
+
+            <div>
+
+              <span>
+                03 / TECHNOLOGY EXPLORER
+              </span>
+
+              <h2>
+                Beyond Vanilla
+              </h2>
+
+              <p>
+                Explore technologies you may encounter
+                as your web development journey grows.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="technology-layout">
+
+            <div class="technology-tabs">
+
+              <button
+                type="button"
+                class="technology-tab active"
+                data-technology="nextjs"
+              >
+                <span>01</span>
+
+                <div>
+                  <strong>Next.js</strong>
+                  <small>React Framework</small>
+                </div>
+              </button>
+
+              <button
+                type="button"
+                class="technology-tab"
+                data-technology="vue"
+              >
+                <span>02</span>
+
+                <div>
+                  <strong>Vue.js</strong>
+                  <small>JavaScript Framework</small>
+                </div>
+              </button>
+
+              <button
+                type="button"
+                class="technology-tab"
+                data-technology="angular"
+              >
+                <span>03</span>
+
+                <div>
+                  <strong>Angular</strong>
+                  <small>Web Framework</small>
+                </div>
+              </button>
+
+              <button
+                type="button"
+                class="technology-tab"
+                data-technology="backend"
+              >
+                <span>04</span>
+
+                <div>
+                  <strong>Backend</strong>
+                  <small>Server Development</small>
+                </div>
+              </button>
+
+            </div>
+
+            <article
+              class="technology-content"
+              id="technology-content"
+            ></article>
+
+          </div>
+
+        </section>
+
+        <section
+          class="dashboard-section profile"
+          id="profile"
+        >
+
+          <div class="section-header">
+
+            <div>
+
+              <span>
+                04 / INTERN PROFILE
+              </span>
+
+              <h2>
+                My Profile
+              </h2>
+
+              <p>
+                Your current internship identity
+                and progress overview.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="profile-card">
+
+            <div class="profile-card__identity">
+
+              <div class="profile-card__avatar">
+                AJ
+              </div>
+
+              <div>
+
+                <span>
+                  WEB DEVELOPMENT INTERN
+                </span>
+
+                <h3>
+                  Alex Joe
+                </h3>
+
+                <p>
+                  TechBridge 30-Day Practical Internship
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="profile-card__details">
+
+              <div>
+                <span>TRACK</span>
+                <strong>Web Development</strong>
+              </div>
+
+              <div>
+                <span>STATUS</span>
+
+                <strong class="profile-status">
+                  <i></i>
+                  In Progress
+                </strong>
+              </div>
+
+              <div>
+                <span>COMPLETION</span>
+
+                <strong id="profile-percentage">
+                  62.5%
+                </strong>
+              </div>
+
+              <div>
+                <span>COHORT</span>
+                <strong>2026</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <div
+    class="task-drawer-overlay"
+    id="task-drawer-overlay"
+  ></div>
+
+  <aside
+    class="task-drawer"
+    id="task-drawer"
+    aria-hidden="true"
+  >
+
+    <header class="task-drawer__header">
+
+      <div>
+        <span>TASK DETAILS</span>
+        <strong id="drawer-number">06 / 08</strong>
+      </div>
+
+      <button
+        type="button"
+        id="close-task-drawer"
+        aria-label="Close task details"
+      >
+        ×
+      </button>
+
+    </header>
+
+    <div
+      class="task-drawer__body"
+      id="task-drawer-body"
+    ></div>
+
+  </aside>
+
+  <div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+  >
+
+    <div class="toast__icon">
+      ✓
+    </div>
+
+    <div>
+      <strong id="toast-title">
+        Progress updated
+      </strong>
+
+      <p id="toast-message">
+        Your changes have been saved.
+      </p>
+    </div>
+
+  </div>
+
+  <div
+    class="completion"
+    id="completion"
+    aria-hidden="true"
+  >
+
+    <div
+      class="completion__overlay"
+      data-close-completion
+    ></div>
+
+    <article class="completion__card">
+
+      <button
+        type="button"
+        class="completion__close"
+        data-close-completion
+        aria-label="Close completion message"
+      >
+        ×
+      </button>
+
+      <span>
+        08 / 08 TASKS
+      </span>
+
+      <div class="completion__mark">
+        ✓
+      </div>
+
+      <h2>
+        Internship
+        <strong>complete.</strong>
+      </h2>
+
+      <p>
+        You've completed every task in your
+        TechBridge practical internship journey.
+      </p>
+
+      <button
+        type="button"
+        data-close-completion
+      >
+        View dashboard
+        <span>→</span>
+      </button>
+
+    </article>
+
+  </div>
+
+  <script src="dashboard.js"></script>
+
+</body>
+</html>

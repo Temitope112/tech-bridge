@@ -236,6 +236,18 @@ app.put("/api/tasks/:id", (req, res) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.json({
+    name: "TechBridge Task Management API",
+    status: "online",
+    endpoints: {
+      health: "/api/health",
+      tasks: "/api/tasks",
+      singleTask: "/api/tasks/:id"
+    }
+  });
+});
+
 
 // ---------------------------------------
 // START SERVER

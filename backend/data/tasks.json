@@ -1,0 +1,99 @@
+[
+  {
+    "id": 1,
+    "title": "Build the TechBridge Homepage",
+    "description": "Build the main TechBridge homepage using semantic HTML and responsive CSS.",
+    "difficulty": "Beginner",
+    "skills": [
+      "HTML5",
+      "CSS3",
+      "Layout"
+    ],
+    "status": "completed"
+  },
+  {
+    "id": 2,
+    "title": "Build the TechBridge Programs Experience",
+    "description": "Create a responsive programs experience that clearly presents TechBridge learning opportunities.",
+    "difficulty": "Beginner",
+    "skills": [
+      "HTML5",
+      "CSS3",
+      "Responsive Design"
+    ],
+    "status": "completed"
+  },
+  {
+    "id": 3,
+    "title": "Build the Internship Tasks Experience",
+    "description": "Design an internship tasks experience that presents practical assignments clearly and responsively.",
+    "difficulty": "Beginner → Intermediate",
+    "skills": [
+      "HTML5",
+      "CSS3",
+      "Information Design"
+    ],
+    "status": "completed"
+  },
+  {
+    "id": 4,
+    "title": "Build an Interactive Internship Roadmap",
+    "description": "Use JavaScript and DOM manipulation to create an interactive roadmap with multiple internship tracks.",
+    "difficulty": "Beginner → Intermediate",
+    "skills": [
+      "JavaScript",
+      "DOM",
+      "Events"
+    ],
+    "status": "completed"
+  },
+  {
+    "id": 5,
+    "title": "Build the TechBridge Challenge Hub",
+    "description": "Create an interactive challenge hub where interns can explore practical challenges by track and difficulty.",
+    "difficulty": "Intermediate",
+    "skills": [
+      "JavaScript",
+      "Filtering",
+      "Dynamic UI"
+    ],
+    "status": "completed"
+  },
+  {
+    "id": 6,
+    "title": "Build the TechBridge Intern Dashboard",
+    "description": "Build an interactive dashboard where interns can track tasks, update progress and explore modern web technologies.",
+    "difficulty": "Intermediate",
+    "skills": [
+      "JavaScript",
+      "DOM",
+      "Responsive UI",
+      "State"
+    ],
+    "status": "completed"
+  },
+  {
+    "id": 7,
+    "title": "Build a TechBridge Task Management API",
+    "description": "Build a Node.js and Express REST API that supplies internship tasks to the dashboard and allows task status updates.",
+    "difficulty": "Intermediate",
+    "skills": [
+      "Node.js",
+      "Express.js",
+      "REST API",
+      "Fetch API"
+    ],
+    "status": "completed"
+  },
+  {
+    "id": 8,
+    "title": "Final Internship Project",
+    "description": "Complete the final practical milestone of the TechBridge web development internship journey.",
+    "difficulty": "Intermediate",
+    "skills": [
+      "Integration",
+      "Product Building"
+    ],
+    "status": "not-started"
+  }
+]
